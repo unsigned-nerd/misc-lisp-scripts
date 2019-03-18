@@ -16,8 +16,7 @@
    :short #\h
    :long "help"))
 
-(multiple-value-bind (options free-args)
-  (opts:get-opts)
+(multiple-value-bind (options free-args) (opts:get-opts)
   (if (getf options :help)
     (progn
       (opts:describe
